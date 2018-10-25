@@ -1,12 +1,12 @@
 import React from "react";
-import "./FriendCard.css";
+import "./BuildingCard.css";
 
-const FriendCard = props => (
+const BuildingCard = props => (
   <div className="card">
     <div className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
-    <div className="content">
+    {/* <div className="content">
       <ul>
         <li>
           <strong>Name:</strong> {props.name}
@@ -18,11 +18,11 @@ const FriendCard = props => (
           <strong>Location:</strong> {props.location}
         </li>
       </ul>
-    </div>
-    <span onClick={() => props.removeFriend(props.id)} className="remove">
+    </div> */}
+    <span onClick={() => props.replaceFriend(props.id)} className="remove">
       𝘅
     </span>
   </div>
 );
 
-export default FriendCard;
+export default BuildingCard;
