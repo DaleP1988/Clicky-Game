@@ -1,11 +1,15 @@
 .wrapper {
-  padding-top: 50px;
-  background: #ECEFF1;
+  /* background: rgb(175, 175, 175); */
+  background-image: url("newWall.jpg");
+  background-size: 100%;
+  background-repeat: none;
+  background-position-y: 80%;
   height: 100%;
   display: flex;
   flex-flow: row wrap;
-  padding: 20px;
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
+  font-family: "Covered By Your Grace," cursive;
+  padding-bottom: 50px;
 }

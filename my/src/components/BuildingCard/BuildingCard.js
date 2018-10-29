@@ -2,26 +2,14 @@ import React from "react";
 import "./BuildingCard.css";
 
 const BuildingCard = props => (
-  <div className="card">
+  <div
+    className="card"
+    value={props.id}
+    onClick={() => props.doClick(props.id)}
+  >
     <div className="img-container">
-      <img alt={props.name} src={props.image} />
+      <img src={props.image} />
     </div>
-    {/* <div className="content">
-      <ul>
-        <li>
-          <strong>Name:</strong> {props.name}
-        </li>
-        <li>
-          <strong>Occupation:</strong> {props.occupation}
-        </li>
-        <li>
-          <strong>Location:</strong> {props.location}
-        </li>
-      </ul>
-    </div> */}
-    <span onClick={() => props.replaceFriend(props.id)} className="remove">
-      𝘅
-    </span>
   </div>
 );
 

@@ -1,50 +1,107 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import BuildingCard from "./components/BuildingCard";
-import Wrapper from "./components/Wrapper";
-import Jumbotron from "./components/Jumbtron";
-import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
+import Jumbotron from "./components/Jumbotron";
+import Container from "./Container";
+import Row from "./Row";
+import Column from "./Column";
 import buildings from "./buildings.json";
 import "./App.css";
 
+function shuffleFriends(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Set this.state
   state = {
-    buildings
+    buildings,
+    currentScore: 0,
+    topScore: 0,
+    rightWrong: "",
+    clicked: []
   };
 
-  replaceBuilding = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const building = this.state.buildings.filter(
-      building => building.id !== id
-    );
-    // Set this.state.friends equal to the new friends array
-    //FIND A METHOD TO SWITCH RATHER THAN ELIMINTE
-    this.setState({ buildings });
+  doClick = id => {
+    if (this.state.clicked.indexOf(id) === -1) {
+      this.doScore();
+      this.setState({ clicked: this.state.clicked.concat(id) });
+    } else {
+      this.reDo();
+    }
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  doScore = () => {
+    const newScore = this.state.currentScore + 1;
+    this.setState({
+      currentScore: newScore,
+      rightWrong: ""
+    });
+    if (newScore >= this.state.topScore) {
+      this.setState({ topScore: newScore });
+    } else if (newScore === 12) {
+      this.setState({ rightWrong: "You win!" });
+    }
+    this.doScramble();
+  };
+
+  reDo = () => {
+    this.setState({
+      currentScore: 0,
+      topScore: this.state.topScore,
+      rightWrong: "Give it another go..",
+      clicked: []
+    });
+    this.doScramble();
+  };
+
+  doScramble = () => {
+    let shuffledFriends = shuffleFriends(buildings);
+    this.setState({ buildings: shuffledFriends });
+  };
+
   render() {
     return (
-      <Router>
-      <Navbar />
-      <Jumbotron />
-      <Wrapper
-        <Title>City Buildings</Title>
-        {this.state.buildings.map(building => (
-          <BuildingCard
-            replaceBuilding={this.replaceBuilding}
-            id={building.id}
-            image={building.image} 
-            name={building.name}
-            );
-          />
-      <Wrapper />
-      <Footer />
-      <Router/>
+      <Wrapper>
+        <Navbar
+          title="Buildings Memory Game"
+          score={this.state.currentScore}
+          topScore={this.state.topScore}
+          rightWrong={this.state.rightWrong}
+        />
+        <Jumbotron />
+        <Title>
+          Try to click on each building at least once. To win click through each
+          building card without double-clicking any one card! It's harder than
+          you think!
+        </Title>
+
+        <Container>
+          <Row>
+            {this.state.buildings.map(building => (
+              <Column size="12">
+                <BuildingCard
+                  key={building.id}
+                  doClick={this.doClick}
+                  doScore={this.doScore}
+                  reDo={this.reDo}
+                  doScramble={this.doScramble}
+                  id={building.id}
+                  image={building.image}
+                />
+              </Column>
+            ))}
+          </Row>
+        </Container>
+      </Wrapper>
     );
-        
- 
+  }
+}
 
 export default App;
