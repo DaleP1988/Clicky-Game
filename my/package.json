@@ -4,9 +4,10 @@
   "private": true,
   "homepage": "http://{Dale1988}.github.io/{Clicky-Game}",
   "dependencies": {
-    "react": "^16.5.2",
+    "build": "^0.1.4",
+    "react": "^16.6.0",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5"
+    "react-scripts": "^2.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
