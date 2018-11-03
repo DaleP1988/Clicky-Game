@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "%7BDale1988%7D.github.io/%7BClicky-Game%7D/precache-manifest.71150cd2754c377fd1a6d4e09aabc366.js"
+  "/Clicky-Game/precache-manifest.45522926fc03de41f07436ce76830e5d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("%7BDale1988%7D.github.io/%7BClicky-Game%7D/index.html", {
+workbox.routing.registerNavigationRoute("/Clicky-Game/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

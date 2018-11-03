@@ -1,14 +1,14 @@
 {
-  "main.css": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/css/main.a728c377.chunk.css",
-  "main.js": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/js/main.074c6a5e.chunk.js",
-  "main.js.map": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/js/main.074c6a5e.chunk.js.map",
-  "static/js/1.d7c32593.chunk.js": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/js/1.d7c32593.chunk.js",
-  "static/js/1.d7c32593.chunk.js.map": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/js/1.d7c32593.chunk.js.map",
-  "runtime~main.js": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/js/runtime~main.aa6165da.js",
-  "runtime~main.js.map": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/js/runtime~main.aa6165da.js.map",
-  "static/media/Wrapper.css": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/media/newWall.b1d3909b.jpg",
-  "static/css/main.a728c377.chunk.css.map": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/static/css/main.a728c377.chunk.css.map",
-  "index.html": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/index.html",
-  "precache-manifest.71150cd2754c377fd1a6d4e09aabc366.js": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/precache-manifest.71150cd2754c377fd1a6d4e09aabc366.js",
-  "service-worker.js": "%7BDale1988%7D.github.io/%7BClicky-Game%7D/service-worker.js"
+  "main.css": "/Clicky-Game/static/css/main.f7ad4b14.chunk.css",
+  "main.js": "/Clicky-Game/static/js/main.20249758.chunk.js",
+  "main.js.map": "/Clicky-Game/static/js/main.20249758.chunk.js.map",
+  "static/js/1.d7c32593.chunk.js": "/Clicky-Game/static/js/1.d7c32593.chunk.js",
+  "static/js/1.d7c32593.chunk.js.map": "/Clicky-Game/static/js/1.d7c32593.chunk.js.map",
+  "runtime~main.js": "/Clicky-Game/static/js/runtime~main.2f9ed211.js",
+  "runtime~main.js.map": "/Clicky-Game/static/js/runtime~main.2f9ed211.js.map",
+  "static/media/Wrapper.css": "/Clicky-Game/static/media/newWall.b1d3909b.jpg",
+  "static/css/main.f7ad4b14.chunk.css.map": "/Clicky-Game/static/css/main.f7ad4b14.chunk.css.map",
+  "index.html": "/Clicky-Game/index.html",
+  "precache-manifest.45522926fc03de41f07436ce76830e5d.js": "/Clicky-Game/precache-manifest.45522926fc03de41f07436ce76830e5d.js",
+  "service-worker.js": "/Clicky-Game/service-worker.js"
 }
