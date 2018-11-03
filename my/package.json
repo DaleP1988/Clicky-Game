@@ -2,7 +2,7 @@
   "name": "my",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://{Dale1988}.github.io/{Clicky-Game}",
+  "homepage": "http://Dale1988.github.io/Clicky-Game",
   "dependencies": {
     "build": "^0.1.4",
     "react": "^16.6.0",
